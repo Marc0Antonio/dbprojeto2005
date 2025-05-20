@@ -1,6 +1,6 @@
-const { Pool } = require("pg");
-
 async function connect() {  
+    const { Pool } = require("pg");
+
     if(global.connection)
         return global.connection.connect();
 
@@ -19,6 +19,6 @@ async function connect() {
     global.connection = pool;
     
     return pool.connect();
-}
-
-module.exports = connect;
+  }
+  
+connect();

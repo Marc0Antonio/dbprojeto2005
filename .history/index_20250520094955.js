@@ -31,9 +31,8 @@ app.get("/client", async (req, res) => {
     const result = await conn.query("SELECT * FROM client");
     res.json(result.rows);
   } catch (err) {
-    console.error("ERRO AO BUSCAR CLIENTES:", err.message);
-res.status(500).send("Erro ao buscar clientes: " + err.message);
-
+    console.error(err);
+    res.status(500).send("Erro ao buscar clientes.");
   }
 });
 
