@@ -52,7 +52,6 @@ app.get("/client/:id", async (req, res) => {
   }
 });
 
-
 // PATCH: atualizar cliente por ID
 app.patch("/client/:id", async (req, res) => {
   const { id } = req.params;
